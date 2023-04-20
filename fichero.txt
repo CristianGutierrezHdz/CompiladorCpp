@@ -1,0 +1,12 @@
+int main() {
+    int num1 = 2;
+    string texto2 = "Hola ";
+
+    do {
+        if ( num1 > 5 ) {
+            num1 = 100;
+        } 
+    } while ( num1 < "cadena" );
+
+    return 0;
+}
