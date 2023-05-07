@@ -5,6 +5,8 @@ public enum Tokens {
     SALTO_DL,
     TD_INT,
     TD_STRING,
+    TD_CHAR,
+    
     PR_DO,
     PR_IF,
     PR_WHILE,
@@ -19,6 +21,8 @@ public enum Tokens {
     IGUAL,
     MAYORQ,
     MENORQ,
+    O_SUMA, 
+    O_RESTA,
     CADENA_CARACT,
     INT,
     FLOAT,

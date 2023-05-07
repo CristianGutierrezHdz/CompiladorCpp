@@ -34,7 +34,9 @@ WHITE = [ ,\t,\r]+
 
 
 int                 {lexeme=yytext(); return TD_INT;}
-string              {lexeme=yytext(); return TD_STRING;} 
+string              {lexeme=yytext(); return TD_STRING;}
+char                {lexeme=yytext(); return TD_CHAR;}
+
 do                  {lexeme=yytext(); return PR_DO;}
 if                  {lexeme=yytext(); return PR_IF;}
 while               {lexeme=yytext(); return PR_WHILE;}
@@ -51,6 +53,9 @@ return              {lexeme=yytext(); return PR_RETURN;}
 "="                 {lexeme=yytext(); return IGUAL;}
 ">"                 {lexeme=yytext(); return MAYORQ;}
 "<"                 {lexeme=yytext(); return MENORQ;}
+
+"+"                 {lexeme=yytext(); return O_SUMA;} 
+"-"                 {lexeme=yytext(); return O_RESTA;}
 
 {WHITE}             {/* */}                                         /* WHITE = [ ,\t,\r]+ */
 

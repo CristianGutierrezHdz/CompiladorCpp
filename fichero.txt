@@ -1,12 +1,12 @@
 int main() {
-    int num1 = 2;
-    string texto2 = "Hola ";
 
-    do {
-        if ( num1 > 5 ) {
-            num1 = 100;
-        } 
-    } while ( num1 < "cadena" );
+    int A, B, C, Res;
+    char nombre, pater, materia, Res2;
+    string nombre_segundo;
 
-    return 0;
+    Res = A + B + C;
+    Res2 = nombre + pater + materia;
+
+    nombre_segundo = "hola";
+
 }

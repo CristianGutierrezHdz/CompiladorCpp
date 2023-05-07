@@ -17,6 +17,7 @@ import java_cup.runtime.Symbol;
     private Symbol symbol(int type){
         return new Symbol(type, yyline, yycolumn);
     }
+    
 %}
 
 I=[a-zA-Z_]+
@@ -27,6 +28,8 @@ WHITE = [ ,\t,\r\n]+
 
 int                 {return new Symbol(sym.TD_INT, yychar, yyline, yytext());}
 string              {return new Symbol(sym.TD_STRING, yychar, yyline, yytext());} 
+char                {return new Symbol(sym.TD_CHAR, yychar, yyline, yytext());}
+
 do                  {return new Symbol(sym.PR_DO, yychar, yyline, yytext());}
 if                  {return new Symbol(sym.PR_IF, yychar, yyline, yytext());}
 while               {return new Symbol(sym.PR_WHILE, yychar, yyline, yytext());}
@@ -44,6 +47,9 @@ return              {return new Symbol(sym.PR_RETURN, yychar, yyline, yytext());
 "="                 {return new Symbol(sym.IGUAL, yychar, yyline, yytext());}
 ">"                 {return new Symbol(sym.MAYORQ, yychar, yyline, yytext());}
 "<"                 {return new Symbol(sym.MENORQ, yychar, yyline, yytext());}
+
+"+"                 {return new Symbol(sym.O_SUMA, yychar, yyline, yytext());}
+"-"                 {return new Symbol(sym.O_RESTA, yychar, yyline, yytext());}
 
 
 {WHITE}             {/* */}
